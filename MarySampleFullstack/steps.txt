@@ -1,0 +1,32 @@
+First Start both the micorservice Authorizationapp and FavouriteApp
+
+
+install the below inside sampleproject folder
+
+(as the version of node is old for this app , using legacy peer deps everywhere)
+
+
+npm install react-router-dom  --legacy-peer-deps
+
+//optional . use bootstrap
+npm install @material-ui/core  --legacy-peer-deps	
+npm install @mui/material @emotion/react @emotion/styled  --legacy-peer-deps
+
+npm audit fix --force   
+
+
+
+include below font in public/index.html
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+
+in package.json script
+ "start": "react-scripts --openssl-legacy-provider start",
+
+Run using npm start
+
+
+npm install cypress
+
+npm run cypress
