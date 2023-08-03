@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
 export function Register() {
-    const [inputs, setInputs] = useState({});
-    const [errorMsg, setError] = useState("");
-    const [hasError, setHasError] = useState(false);
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
     const validEmailRegex = RegExp(
         /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
@@ -11,58 +11,53 @@ export function Register() {
 
     // complete validations in handleSubmit
     const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(inputs);
+        let hasError = false;
+        const alertMsg = [];
 
-        switch (event.target.name) {
-            case 'name':
-                console.log("name trigger")
-                if (this.value.length < 5) {
-                    setError("Full Name must be at least 5 characters long!")
-                }
-                break;
-            case 'email':
-                if (validEmailRegex.test(event.target.value)) {
-                    setError(errorMsg + "\nEmail is not valid!")
-                }
-                break;
-            case 'password':
-                if (event.target.value.length < 8) {
-                    setError(errorMsg + "\nPassword must be at least 8 characters long!")
-                }
-                break;
-            default:
-                break;
+        event.preventDefault();
+
+        if (name.length < 5) {
+            alertMsg.push("Full name must be at least 5 characters long!")
+            hasError = true;
+        }
+        if (!validEmailRegex.test(email)) {
+            alertMsg.push("Invalid email address!")
+            hasError = true;
+        }
+        if (password.length < 8) {
+            alertMsg.push("Password must be at least 8 characters long!")
+            hasError = true;
+        } 
+        
+        if (!hasError) {
+            alertMsg.push("Form validation success!")
         }
 
-        alert(errorMsg);
-    }
-    const handleChange = (event) => {
-        const name = event.target.name;
-        const value = event.target.value;
-        setInputs(values => ({ ...values, [name]: value }))
+        alert(alertMsg.join("\n"))
     }
 
     return (
         <div>
             <form onSubmit={handleSubmit}>
                 <table>
-                    <tr>
-                        <td>Name:</td>
-                        <td><input type="text" name="name" onChange={handleChange} /></td>
-                    </tr>
-                    <tr>
-                        <td>Email:</td>
-                        <td><input type="email" name="email" onChange={handleChange} /></td>
-                    </tr>
-                    <tr>
-                        <td>Password:</td>
-                        <td><input type="password" name="password" onChange={handleChange} /></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><input type="submit" name="submit" /></td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>Name:</td>
+                            <td><input type="text" name="name" onChange={ e => setName(e.target.value)} /></td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td><input type="email" name="email" onChange={ e => setEmail(e.target.value)} /></td>
+                        </tr>
+                        <tr>
+                            <td>Password:</td>
+                            <td><input type="password" name="password" onChange={ e => setPassword(e.target.value)}/></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" name="submit" /></td>
+                        </tr>
+                    </tbody>
                 </table>
             </form>
         </div>
