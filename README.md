@@ -1,40 +1,40 @@
 # React
 Cognizant TekStac Hands-on assignments
 
-## HOL1
+** HOL1 **
 myfirstreact
 
-## HOL2
+** HOL2 **
 student-app
 
-## HOL3
+** HOL3 **
 scorecalculatorapp
 
-## HOL4
+** HOL4 **
 shoppingapp
 
-## HOL5
+** HOL5 **
 counterapp
 
-## HOL6
+** HOL6 **
 cricketapp
 
-## HOL7
+** HOL7 **
 officespacerentalapp
 
-## HOL8
+** HOL8 **
 eventexamplesapp
 
-## HOL9
+** HOL9 **
 ticketbookingapp
 
-## HOL10
+** HOL10 **
 bloggerapp
 
-## HOL11
+** HOL11 **
 ticketraisingapp
 
-## HOL12
+** HOL12 **
 mailregisterapp
 
-## HOL13
+** HOL13 **
