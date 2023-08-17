@@ -1,5 +1,6 @@
 # React
-Cognizant TekStac Hands-on assignments
+Cognizant TekStac Hands-on assignments.
+STATUS: HANDS-ON COMPLETED.
 
 **HOL1**
 myfirstreact
@@ -38,3 +39,4 @@ ticketraisingapp
 mailregisterapp
 
 **HOL13**
+fetchuserapp
