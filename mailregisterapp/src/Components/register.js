@@ -27,8 +27,8 @@ export function Register() {
         if (password.length < 8) {
             alertMsg.push("Password must be at least 8 characters long!")
             hasError = true;
-        } 
-        
+        }
+
         if (!hasError) {
             alertMsg.push("Form validation success!")
         }
@@ -43,15 +43,15 @@ export function Register() {
                     <tbody>
                         <tr>
                             <td>Name:</td>
-                            <td><input type="text" name="name" onChange={ e => setName(e.target.value)} /></td>
+                            <td><input type="text" name="name" onChange={e => setName(e.target.value)} /></td>
                         </tr>
                         <tr>
                             <td>Email:</td>
-                            <td><input type="email" name="email" onChange={ e => setEmail(e.target.value)} /></td>
+                            <td><input type="email" name="email" onChange={e => setEmail(e.target.value)} /></td>
                         </tr>
                         <tr>
                             <td>Password:</td>
-                            <td><input type="password" name="password" onChange={ e => setPassword(e.target.value)}/></td>
+                            <td><input type="password" name="password" onChange={e => setPassword(e.target.value)} /></td>
                         </tr>
                         <tr>
                             <td></td>
