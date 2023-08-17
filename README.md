@@ -2,6 +2,8 @@
 Cognizant TekStac Hands-on assignments.
 STATUS: HANDS-ON COMPLETED.
 
+Refer to React Logs.doc to see progression and learning takeaways! Includes: code changes, errors, and comparison of learning objectives with modern React/coding standards.
+
 **HOL1**
 myfirstreact
 
